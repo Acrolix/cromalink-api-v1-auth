@@ -10,11 +10,17 @@ services:
     env_file:
       - .env
     environment:
+      - APP_NAME='Cromalink API'
       - DB_HOST=cromalink_db
+      - DB_DATABASE=cromalink_db
+      - DB_USERNAME=cromalink_user
+      - DB_PASSWORD=Cr0m4l1nK.
       - DB_PORT=3306
       - APP_DEBUG=false
     ports:
       - "8000:80"
+    volumes:
+      - ./:/var/www/html
 
 networks:
   cromalink:
