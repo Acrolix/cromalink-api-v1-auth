@@ -19,8 +19,8 @@ services:
       - APP_DEBUG=false
     ports:
       - "8000:80"
-    volumes:
-      - ./:/var/www/html
+    # volumes:
+    #   - ./:/var/www/html
 
 networks:
   cromalink:

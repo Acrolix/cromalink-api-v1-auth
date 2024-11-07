@@ -35,9 +35,11 @@ RUN composer install --prefer-dist --optimize-autoloader --no-dev --no-interacti
 # RUN php artisan route:cache
 # RUN php artisan optimize
 
+#RUN php artisan passport:keys
+
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-RUN rm -rf .git
+#RUN rm -rf .git
