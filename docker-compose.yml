@@ -17,10 +17,6 @@ services:
       - DB_PASSWORD=Cr0m4l1nK.
       - DB_PORT=3306
       - APP_DEBUG=false
-    ports:
-      - "8000:80"
-    # volumes:
-    #   - ./:/var/www/html
 
 networks:
   cromalink:

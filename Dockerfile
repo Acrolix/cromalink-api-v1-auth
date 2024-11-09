@@ -42,4 +42,4 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 
 # Clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-#RUN rm -rf .git
+RUN rm -rf .git

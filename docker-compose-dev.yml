@@ -1,0 +1,18 @@
+services:
+  auth:
+    container_name: cromalink-api-auth
+    hostname: cromalink-api-auth
+    image: cromalink-api-auth
+    networks:
+      - cromalink
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www/html
+
+networks:
+  cromalink:
+    external: true
